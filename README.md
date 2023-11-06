@@ -11,8 +11,6 @@ Original mod by **zeobiouslyfakeacc**
 3. Download the latest version of `ShorterReadingIntervals.dll` from the [releases page](https://github.com/RomainDeschampsFR/ShorterReadingIntervals/releases)
 4. Move `ShorterReadingIntervals.dll` into the Mods folder in your TLD install directory
 
-Alternatively, you can download `ShorterReadingIntervals_with_ModSettings.zip` and extract it into your Mods directory.
-
 ## Screenshots
 
 Half-hour increments:
