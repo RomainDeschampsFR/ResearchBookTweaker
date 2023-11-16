@@ -7,9 +7,9 @@ using ModSettings;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace ShorterReadingIntervals
+namespace ShorterReadingIntervalsLegacy
 {
-    internal class ShorterReadingIntervalsSettings : JsonModSettings
+    internal class ShorterReadingIntervalsLegacySettings : JsonModSettings
     {
 
         [Name("Reading interval length")]
@@ -25,11 +25,11 @@ namespace ShorterReadingIntervals
     internal static class Settings
     {
 
-        private static ShorterReadingIntervalsSettings settings;
+        private static ShorterReadingIntervalsLegacySettings settings;
 
         public static void OnLoad()
         {
-            settings = new ShorterReadingIntervalsSettings();
+            settings = new ShorterReadingIntervalsLegacySettings();
             settings.AddToModSettings("Shorter Reading Intervals");
         }
 

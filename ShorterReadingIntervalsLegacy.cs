@@ -4,9 +4,9 @@ using Il2CppInterop;
 using Il2CppInterop.Runtime.Injection; 
 using System.Collections;
 
-namespace ShorterReadingIntervals
+namespace ShorterReadingIntervalsLegacy
 {
-	public class ShorterReadingIntervals : MelonMod
+	public class ShorterReadingIntervalsLegacy : MelonMod
 	{
 		public override void OnInitializeMelon()
 		{

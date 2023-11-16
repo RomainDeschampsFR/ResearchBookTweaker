@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using HarmonyLib;
 using System.Threading.Tasks;
-using ShorterReadingIntervals;
+using ShorterReadingIntervalsLegacy;
 using UnityEngine;
 using Il2CppTLD.Gear;
 using MelonLoader;
 
-namespace ShorterReadingIntervals
+namespace ShorterReadingIntervalsLegacy
 {
     internal class Patches
     {
@@ -117,10 +117,8 @@ namespace ShorterReadingIntervals
             internal static bool Prefix(ResearchItem __instance)
             {
                 // The method is called twice in a row for some reasons. The code below from Zeo throw an error so... find another way to prevent it.
-                MelonLogger.Msg("Test");
                 if (Time.time - executionTime < 0.5f) return false;
                 executionTime = Time.time;
-                MelonLogger.Msg("True");
                 // Only run the original - and award skill points - if the item type is still Tool and not yet FireStarting
                 return true; //__instance.GetComponent<GearItem>()?.m_Type ==  GearTypeEnum.Tool;  
             }
