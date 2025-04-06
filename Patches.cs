@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using HarmonyLib;
 using System.Threading.Tasks;
-using ShorterReadingIntervalsLegacy;
+using ResearchBookTweaker;
 using UnityEngine;
 using Il2CppTLD.Gear;
 using MelonLoader;
 
-namespace ShorterReadingIntervalsLegacy
+namespace ResearchBookTweaker
 {
     internal class Patches
     {
@@ -75,8 +75,7 @@ namespace ShorterReadingIntervalsLegacy
         {
             internal static void Prefix(Panel_Inventory_Examine __instance, ref int minutes)
             {
-                if (!__instance.m_GearItem?.m_ResearchItem)
-                    return;
+                if (!__instance.m_GearItem?.m_ResearchItem) return;
 
                 float hoursResearchRemaining = GetHoursResearchRemaining(__instance);
                 float minutesToRead = Math.Min(minutes * Settings.GetReadingIntervalHours(), hoursResearchRemaining * 60f);
@@ -93,8 +92,7 @@ namespace ShorterReadingIntervalsLegacy
         {
             internal static void Prefix(Panel_Inventory_Examine __instance, ref float normalizedProgress)
             {
-                if (!__instance.m_GearItem?.m_ResearchItem)
-                    return;
+                if (!__instance.m_GearItem?.m_ResearchItem) return;
 
                 int hoursToRead = __instance.m_HoursToRead;
                 float intervalsRead = normalizedProgress * hoursToRead;
@@ -129,8 +127,7 @@ namespace ShorterReadingIntervalsLegacy
         {
             internal static void Postfix(Panel_Inventory_Examine __instance)
             {
-                if (!__instance.m_GearItem?.m_ResearchItem)
-                    return;
+                if (!__instance.m_GearItem?.m_ResearchItem) return;
 
                 string text = Localization.Get("GAMEPLAY_HoursResearched");
                 text = text.Replace("{val1}", __instance.m_GearItem.m_ResearchItem.GetElapsedHours().ToString("0.##"));

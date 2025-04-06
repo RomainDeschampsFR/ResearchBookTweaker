@@ -7,11 +7,10 @@ using ModSettings;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace ShorterReadingIntervalsLegacy
+namespace ResearchBookTweaker
 {
-    internal class ShorterReadingIntervalsLegacySettings : JsonModSettings
+    internal class ResearchBookTweakerSettings : JsonModSettings
     {
-
         [Name("Reading interval length")]
         [Description("Sets the shortest amount of time that a book can be read for.")]
         [Choice("15 minutes", "30 minutes", "60 minutes")]
@@ -25,12 +24,12 @@ namespace ShorterReadingIntervalsLegacy
     internal static class Settings
     {
 
-        private static ShorterReadingIntervalsLegacySettings settings;
+        private static ResearchBookTweakerSettings settings;
 
         public static void OnLoad()
         {
-            settings = new ShorterReadingIntervalsLegacySettings();
-            settings.AddToModSettings("Shorter Reading Intervals");
+            settings = new ResearchBookTweakerSettings();
+            settings.AddToModSettings("Research Book Tweaker");
         }
 
         internal static float GetReadingIntervalHours()
@@ -44,7 +43,7 @@ namespace ShorterReadingIntervalsLegacy
                 case IntervalLength.MINS_15:
                     return 0.25f;
                 default:
-                    Debug.LogError("[ShorterReadingIntervals] Unknown interval length: " + settings.intervalLength);
+                    Debug.LogError("[ResearchBookTweaker] Unknown interval length: " + settings.intervalLength);
                     return 1f;
             }
         }

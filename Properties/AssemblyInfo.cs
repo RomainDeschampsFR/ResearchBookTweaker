@@ -1,15 +1,12 @@
 using MelonLoader;
-using ShorterReadingIntervalsLegacy;
+using ResearchBookTweaker;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("ShorterReadingIntervalsLegacy")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ShorterReadingIntervalsLegacy")]
+[assembly: AssemblyTitle("ResearchBookTweaker")]
+[assembly: AssemblyProduct("ResearchBookTweaker")]
 [assembly: AssemblyCopyright("MIT License")]
-[assembly: AssemblyVersion("1.4.0")]
-[assembly: AssemblyFileVersion("1.4.0")]
-[assembly: MelonInfo(typeof(ShorterReadingIntervalsLegacy.ShorterReadingIntervalsLegacy), "ShorterReadingIntervalsLegacy", "1.4.0", "zeobviouslyfakeacc")]
+[assembly: AssemblyVersion("1.0.0")]
+[assembly: AssemblyFileVersion("1.0.0")]
+[assembly: MelonInfo(typeof(ResearchBookTweaker.Main), "ResearchBookTweaker", "1.0.0", "zeobviouslyfakeacc")]
 [assembly: MelonGame("Hinterland", "TheLongDark")]

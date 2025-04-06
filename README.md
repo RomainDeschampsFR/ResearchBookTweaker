@@ -4,6 +4,10 @@ A mod for The Long Dark that lets you research for shorter amounts of time and l
 
 Original mod by **zeobiouslyfakeacc**
 
+## KNOWN ISSUES (I'm not intending to fix)
+* **Shorter Reading Intervals** features doesn't work with **Settled Mind** feat
+* **Shorter Reading Intervals** if you cancel reading too close to the end of the book, the book will be complete
+
 ## Installation
 
 1. If you haven't done so already, install MelonLoader by downloading and running [MelonLoader.Installer.exe](https://github.com/HerpDerpinstine/MelonLoader/releases/latest/download/MelonLoader.Installer.exe)
