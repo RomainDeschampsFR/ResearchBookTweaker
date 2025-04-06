@@ -19,7 +19,7 @@ Original mod by **zeobiouslyfakeacc**
 
 Half-hour increments:
 
-![Screenshot of reading in half-hour increments](images/screenshot-1.png)
+![screenshot-1](https://github.com/RomainDeschampsFR/ShorterReadingIntervalsLegacy/assets/38351288/c5d11e63-ee00-4850-bdff-d767781a65c5)
 
 Interrupted research still counts:
 
