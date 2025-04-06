@@ -8,5 +8,5 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("MIT License")]
 [assembly: AssemblyVersion("1.0.0")]
 [assembly: AssemblyFileVersion("1.0.0")]
-[assembly: MelonInfo(typeof(ResearchBookTweaker.Main), "ResearchBookTweaker", "1.0.0", "zeobviouslyfakeacc")]
+[assembly: MelonInfo(typeof(ResearchBookTweaker.Main), "ResearchBookTweaker", "1.0.0", "Romain, zeobviouslyfakeacc")]
 [assembly: MelonGame("Hinterland", "TheLongDark")]
