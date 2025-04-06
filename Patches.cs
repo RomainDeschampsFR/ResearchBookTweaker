@@ -141,5 +141,70 @@ namespace ResearchBookTweaker
             ResearchItem researchItem = panel.m_GearItem.m_ResearchItem;
             return researchItem.m_TimeRequirementHours - researchItem.GetElapsedHours();
         }
+
+        [HarmonyPatch(typeof(GearItem), nameof(GearItem.Awake))]
+        private static class GearItem_Awake_ResearchBook
+        {
+            internal static void Postfix(GearItem __instance)
+            {
+                if (__instance.m_ResearchItem)
+                {
+                    switch (__instance.name)
+                    {
+                        case "GEAR_BookFireStarting":
+                            __instance.m_ResearchItem.m_TimeRequirementHours = Settings.settings.timeFireStarting;
+                            __instance.m_ResearchItem.m_SkillPoints = Settings.settings.pointsFireStarting;
+                            break;
+                        case "GEAR_BookRevolverFirearm":
+                            __instance.m_ResearchItem.m_TimeRequirementHours = Settings.settings.timeRevolverFirearm;
+                            __instance.m_ResearchItem.m_SkillPoints = Settings.settings.pointsRevolverFirearm;
+                            break;
+                        case "GEAR_BookArchery":
+                            __instance.m_ResearchItem.m_TimeRequirementHours = Settings.settings.timeArchery;
+                            __instance.m_ResearchItem.m_SkillPoints = Settings.settings.pointsArchery;
+                            break;
+                        case "GEAR_BookRifleFirearm":
+                            __instance.m_ResearchItem.m_TimeRequirementHours = Settings.settings.timeRifleFirearm;
+                            __instance.m_ResearchItem.m_SkillPoints = Settings.settings.pointsRifleFirearm;
+                            __instance.m_ResearchItem.m_NoBenefitAtSkillLevel = Settings.settings.noBenefitRifleFirearm;
+                            break;
+                        case "GEAR_BookRifleFirearmAdvanced":
+                            __instance.m_ResearchItem.m_TimeRequirementHours = Settings.settings.timeRifleFirearmAdvanced;
+                            __instance.m_ResearchItem.m_SkillPoints = Settings.settings.pointsRifleFirearmAdvanced;
+                            break;
+                        case "GEAR_BookCooking":
+                            __instance.m_ResearchItem.m_TimeRequirementHours = Settings.settings.timeCooking;
+                            __instance.m_ResearchItem.m_SkillPoints = Settings.settings.pointsCooking;
+                            break;
+                        case "GEAR_BookMending":
+                            __instance.m_ResearchItem.m_TimeRequirementHours = Settings.settings.timeMending;
+                            __instance.m_ResearchItem.m_SkillPoints = Settings.settings.pointsMending;
+                            break;
+                        case "GEAR_BookIceFishing":
+                            __instance.m_ResearchItem.m_TimeRequirementHours = Settings.settings.timeIceFishing;
+                            __instance.m_ResearchItem.m_SkillPoints = Settings.settings.pointsIceFishing;
+                            break;
+                        case "GEAR_BookCarcassHarvesting":
+                            __instance.m_ResearchItem.m_TimeRequirementHours = Settings.settings.timeCarcassHarvesting;
+                            __instance.m_ResearchItem.m_SkillPoints = Settings.settings.pointsCarcassHarvesting;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+
+            [HarmonyPatch(typeof(ResearchItem), nameof(ResearchItem.OnResearchComplete))]
+            private static class ResearchItem_OnResearchComplete
+            {
+                internal static void Postfix(ResearchItem __instance)
+                {
+                    if (Settings.settings.reredable)
+                    {
+                        __instance.m_ElapsedHours = 0;
+                    }
+                }
+            }
+        }
     }
 }
