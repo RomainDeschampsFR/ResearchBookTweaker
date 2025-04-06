@@ -1,21 +1,15 @@
-# ShorterReadingIntervals
+# RESEARCH BOOK TWEAKER
 
-A mod for The Long Dark that lets you research for shorter amounts of time and lets you interrupt research at any time without losing progress.
+* Allows you to research for shorter amounts of time *[ShorterReadingIntervals feature]*
+* Lets you interrupt research at any time without losing progress. *[ShorterReadingIntervals feature]*
+* Allows you to tweak the time requirement and the amount of points earned for each book type
+* Allows you to set the level at which **Frontier Shooting Guide** *(beginner's book for rifle shooting)* ceases to provide points.
+* Allows you to reread a book indefinitely
+* *It means you could set time and points earned at fairly low value and use research books more like a pass time activity.*
 
-Original mod by **zeobiouslyfakeacc**
-
-## KNOWN ISSUES (I'm not intending to fix)
+## KNOWN ISSUES
 * **Shorter Reading Intervals** features doesn't work with **Settled Mind** feat
-* **Shorter Reading Intervals** if you cancel reading too close to the end of the book, the book will be complete
-
-## Installation
-
-1. If you haven't done so already, install MelonLoader by downloading and running [MelonLoader.Installer.exe](https://github.com/HerpDerpinstine/MelonLoader/releases/latest/download/MelonLoader.Installer.exe)
-2. If you haven't done so already, install ModSettings
-3. Download the latest version of `ShorterReadingIntervals.dll` from the [releases page](https://github.com/RomainDeschampsFR/ShorterReadingIntervals/releases)
-4. Move `ShorterReadingIntervals.dll` into the Mods folder in your TLD install directory
-
-## Screenshots
+* If you cancel reading too close to the end of the book, the book will be complete anyway.
 
 Half-hour increments:
 
@@ -25,15 +19,8 @@ Interrupted research still counts:
 
 ![Screenshot of interrupted reading progress being counted](images/screenshot-2.png)
 
-## Configuration
+## CREDITS
+Original mod by **zeobiouslyfakeacc**
 
-The shortest reading interval and what happens to your research progress when you cancel researching / are interrupted can be changed:
+[![Github All Releases](https://img.shields.io/github/downloads/RomainDeschampsFR/ResearchBookTweaker/total.svg)]()
 
-1. In the main menu, select 'Options' and then 'Mod Settings'
-
-   ![Screenshot of options](images/settings-1.png)
-2. Then, select 'Shorter Reading Intervals' from the mod list
-
-   ![Screenshot of mod settings](images/settings-2.png)
-3. Make your changes to the settings
-4. Finally, press the 'Confirm' button to save your changes
