@@ -130,6 +130,21 @@ namespace ResearchBookTweaker
         [Description("Default Game Value: 10")]
         [Slider(2, 20)]
         public int pointsCarcassHarvesting = 10;
+
+        protected override void OnConfirm()
+        {
+            base.OnConfirm();
+            Main.ChangePrefabResearchItems("GEAR_BookFireStarting", pointsFireStarting, timeFireStarting);
+            Main.ChangePrefabResearchItems("GEAR_BookRevolverFirearm", pointsRevolverFirearm, timeRevolverFirearm);
+            Main.ChangePrefabResearchItems("GEAR_BookArchery", pointsArchery, timeArchery);
+            Main.ChangePrefabResearchItems("GEAR_BookRifleFirearm", pointsRifleFirearm, timeRifleFirearm, noBenefitRifleFirearm);
+            Main.ChangePrefabResearchItems("GEAR_BookRifleFirearmAdvanced", pointsRifleFirearmAdvanced, timeRifleFirearmAdvanced);
+            Main.ChangePrefabResearchItems("GEAR_BookGunsmithing", pointsGunsmithing, timeGunsmithing);
+            Main.ChangePrefabResearchItems("GEAR_BookCooking", pointsCooking, timeCooking);
+            Main.ChangePrefabResearchItems("GEAR_BookMending", pointsMending, timeMending);
+            Main.ChangePrefabResearchItems("GEAR_BookIceFishing", pointsIceFishing, timeIceFishing);
+            Main.ChangePrefabResearchItems("GEAR_BookCarcassHarvesting", pointsCarcassHarvesting, timeCarcassHarvesting);
+        }
     }
 
     internal static class Settings
